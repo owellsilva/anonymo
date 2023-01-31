@@ -4,7 +4,7 @@
 web site for anonymo comunity
 
 
-![Logo](https://superb-hummingbird-0365e6.netlify.app/banner.png)
+![Logo](https://anonymo.netlify.app/img/banner%20(1).jpg)
 
 
 ## 🛠 Stilos
@@ -15,3 +15,8 @@ Javascript, HTML, CSS...
 
 - [@owellandry](https://www.github.com/owellandry)
 - [@owellsilva](https://www.github.com/owellsilva)
+
+## Soporte
+
+para soporte, Gmail owellandry10@gmail.com o owellandryp@gmail.com .
+
