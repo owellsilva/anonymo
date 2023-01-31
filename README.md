@@ -16,6 +16,10 @@ Javascript, HTML, CSS...
 - [@owellandry](https://www.github.com/owellandry)
 - [@owellsilva](https://www.github.com/owellsilva)
 
+
+![Logo](https://anonymo.netlify.app/img/banner%20(1).jpg)
+
+
 ## Soporte
 
 para soporte, Gmail owellandry10@gmail.com o owellandryp@gmail.com .
