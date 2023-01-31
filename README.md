@@ -1,7 +1,7 @@
 
 # anonymo
 
-web site for anonymo comunity
+<p style="text-aling:center;">web site for anonymo comunity</p>
 
 
 ![Logo](https://anonymo.netlify.app/img/banner%20(1).jpg)
