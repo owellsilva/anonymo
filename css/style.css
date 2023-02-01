@@ -395,8 +395,8 @@ body{
 }
 
 .cen{
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 50px;
+  margin-left: 50px;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -408,6 +408,8 @@ body{
 
 .center-text{
   text-align: center;
+  padding: 35px;
+
 }
 
 
