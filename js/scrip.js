@@ -18,7 +18,7 @@ createApp({
 					name: "owell polanco",
 					photo: "https://cdn.discordapp.com/avatars/1054167971506966558/f6c3a7ed550b9718caabc516e83042ae.webp?size=128",
 					role: "developer",
-					role: "seo"
+					role: "seo dev desinger"
 				},
 				{
 					name: "santiago suarez",
