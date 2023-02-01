@@ -319,10 +319,8 @@ body{
 .page{
   max-width: 380px;
   padding: 1rem;
-  margin: auto;
-  text-align: justify;
-  text-justify: inter-word;
-  margin-bottom: 80px;
+  margin: auto;  
+  text-align: center;
 }
 
 .page__name{
@@ -397,9 +395,10 @@ body{
 }
 
 .cen{
-  text-align: center;
   margin-right: 40px;
   margin-left: 40px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .izqui{
