@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Inconsolata&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--highlight: #d33a03;
+	--dark-grey: #333333;
+	--lite-grey: #777777;
+}
+
+body {
+	justify-content: center;
+	font-family: "Fira Sans", sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+input[type="checkbox"] {
+	appearance: none;
+}
+
+section { 
+	display: grid;
+	/*grid-template-columns: 25% 1fr;
+	padding: 2em;*/
+	margin-top: 80px;
+}
+
+/* Main Staff List 
+------------------------------------------------*/
+main {
+	margin-left: 50px;
+    margin-right: 20px;
+}
+main h3 {
+	font-family: "Inconsolata", sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: var(--dark-grey);
+}
+main ul {
+	margin-top: 2em;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 2em;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: 70px 1fr;
+	column-gap: 5px;
+	align-items: center;
+	padding: 0.5em 1em;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border: 1px solid #e2e2e2;
+	border-radius: 1.2em;
+	-webkit-border-radius: 1.2em;
+	-moz-border-radius: 1.2em;
+	-ms-border-radius: 1.2em;
+	-o-border-radius: 1.2em;
+}
+.card__photo {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+.card__info h4 {
+	font-family: "Fira Sans", sans-serif;
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: var(--dark-grey);
+}
+.card__info p {
+	font-family: "Inconsolata", sans-serif;
+	font-size: 0.9rem;
+	font-style: normal;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: var(--lite-grey);
+}
+
+/* Tags Sidebar
+------------------------------------------------*/
+aside h3 {
+	font-family: "Inconsolata", sans-serif;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: var(--dark-grey);
+}
+aside ul {
+	padding: 0.5em 0;
+}
+aside li {
+	display: inline-block;
+}
+aside label {
+	font-family: "Fira Sans", sans-serif;
+	font-size: 0.9rem;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: 20px;
+	text-transform: none;
+	color: var(--lite-grey);
+	cursor: pointer;
+}
+/* Removes the last comma */
+aside li:last-of-type label > span {
+	display: none;
+}
+
+/* Developer */
+/* If any tag is selected then hide all posts... */
+aside:has(:checked) + main li {
+	display: none;
+}
+/* and only show the selected posts... */
+aside:has(#developer:checked) + main li[data-tag="developer"] {
+	display: grid;
+}
+/* then highlight the selected tag */
+aside label:has(+ #developer:checked) {
+	font-weight: bold;
+	color: var(--highlight);
+}
+
+/* Engineer */
+aside label:has(+ #engineer:checked) {
+	font-weight: bold;
+	color: var(--highlight);
+}
+aside:has(#engineer:checked) + main li[data-tag="engineer"] {
+	display: grid;
+}
+/* Designer */
+aside label:has(+ #designer:checked) {
+	font-weight: bold;
+	color: var(--highlight);
+}
+aside:has(#designer:checked) + main li[data-tag="designer"] {
+	display: grid;
+}
+/* UI */
+aside label:has(+ #ui:checked) {
+	font-weight: bold;
+	color: var(--highlight);
+}
+aside:has(#ui:checked) + main li[data-tag="ui"] {
+	display: grid;
+}
+/* Mobile */
+aside label:has(+ #mobile:checked) {
+	font-weight: bold;
+	color: var(--highlight);
+}
+aside:has(#mobile:checked) + main li[data-tag="mobile"] {
+	display: grid;
+}
+/* SEO */
+aside label:has(+ #seo:checked) {
+	font-weight: bold;
+	color: var(--highlight);
+}
+aside:has(#seo:checked) + main li[data-tag="seo"] {
+	display: grid;
+}
+/* Dev Ops */
+aside label:has(+ #dev-ops:checked) {
+	font-weight: bold;
+	color: var(--highlight);
+}
+aside:has(#dev-ops:checked) + main li[data-tag="dev-ops"] {
+	display: grid;
+}
+/* Tester */
+aside label:has(+ #tester:checked) {
+	font-weight: bold;
+	color: var(--highlight);
+}
+aside:has(#tester:checked) + main li[data-tag="tester"] {
+	display: grid;
+}
+
+@media (max-width: 700px) {
+	section {
+		width: 90vw;
+		display: block;
+		align-items: flex-start;
+	}
+	main {
+		margin-top: 1em;
+		padding: 0;
+		height: 100%;
+	}
+}
+
+.cen{
+	text-align: center;
+}
+
+.card2 {
+	grid-template-columns: 70px 1fr;
+	column-gap: 5px;
+	align-items: center;
+	padding: 0.5em 1em;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border: 1px solid #e2e2e2;
+	border-radius: 1.2em;
+	-webkit-border-radius: 1.2em;
+	-moz-border-radius: 1.2em;
+	-ms-border-radius: 1.2em;
+	-o-border-radius: 1.2em;
+	text-align: center;
+}
+
+.card3 {
+	grid-template-columns: 70px 1fr;
+	column-gap: 5px;
+	align-items: center;
+	padding: 0.5em 1em;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border: 1px solid #e2e2e2;
+	border-radius: 1.2em;
+	-webkit-border-radius: 1.2em;
+	-moz-border-radius: 1.2em;
+	-ms-border-radius: 1.2em;
+	-o-border-radius: 1.2em;
+	text-align: center;
+	padding-bottom: 40%;
+}
