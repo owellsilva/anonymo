@@ -319,8 +319,10 @@ body{
 .page{
   max-width: 380px;
   padding: 1rem;
-  margin: auto;  
-  text-align: center;
+  margin: auto;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 80px;
 }
 
 .page__name{
