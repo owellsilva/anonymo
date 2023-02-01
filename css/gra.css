@@ -46,3 +46,11 @@ canvas {
   letter-spacing: 0.2px;
   margin: 0;
 }
+
+.button{
+  margin-top: 20px;
+  color: black;
+  background-color: transparent;
+  border-radius: 25px;
+  border: black 2px solid;
+}
