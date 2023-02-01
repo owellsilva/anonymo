@@ -1,19 +1,3 @@
-/*
-!!! This demo is being refactored !!!
-
--- add auto focus on the first item of the navigation when it is shown
--- replace .menu:not(.menu_activated) .menu__list{  display: none; } to hidden
--- use :is pseudo-class to simplify selectors 
-
-*/
-/*
-=====
-DEPENDENCES
-=====
-*/
-
-/* The component will reset button browser styles */
-
 .r-button{
   --uirButtonBackgroundColor: var(--rButtonBackgroundColor, transparent);
   --uirButtonPadding: var(--rButtonPadding, var(--rButtonPaddingTop, 0) var(--rButtonPaddingRight, 0) var(--rButtonPaddingBottom, 0) var(--rButtonPaddingLeft, 0));
@@ -42,13 +26,11 @@ DEPENDENCES
 .r-button[type="reset"]::-moz-focus-inner,
 .r-button[type="submit"]::-moz-focus-inner {
   
-  /* Remove the inner border and padding in Firefox. */
   
   border-style: none;
   padding: 0;
 }
 
-/* The component will reset browser's styles of link */
 
 .r-link{
     --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
@@ -60,7 +42,7 @@ DEPENDENCES
     text-decoration: var(--uirLinkTextDecoration) !important;
 }
 
-/* The component will reset browser's styles of list */
+
 
 .r-list{
     --uirListPaddingLeft: var(--rListPaddingLeft, 0);
@@ -75,7 +57,7 @@ DEPENDENCES
     text-align: center;
 }
 
-/* Basic styles of the hamburger component */
+
 
 .m-hamburger{  
   --uiHamburgerThickness: var(--hamburgerThickness, 4px);
@@ -113,12 +95,12 @@ DEPENDENCES
 }
 
 .m-hamburger__label{
-  /* The calculation of middle hamburger button line position */
+
   
   top: calc(50% - calc(var(--uiHamburgerThickness) / 2));
 }
 
-/* helper to hide elements that are available only for screen readers. */
+
 
 .screen-reader{
   width: var(--screenReaderWidth, 1px) !important;
@@ -131,11 +113,7 @@ DEPENDENCES
   overflow: var(--screenReaderOverflow, hidden) !important;
 }
 
-/*
-=====
-MENU STYLES
-=====
-*/
+
 
 .menu{
   --uiMenuCircleSize: var(--menuCircleSize, 6.25rem);
@@ -196,10 +174,6 @@ MENU STYLES
 }
 
 .menu__toggle::before{
-  /*
-  1. The font-size property is used to simplify calculations of the element's sizes and position
-  2. The negative value for the bottom property need for hiding half of circle. 
-  */
 
   content: "";
   width: 1em;
@@ -220,7 +194,6 @@ MENU STYLES
               height .25s cubic-bezier(0.04, -0.1, 0.29, 0.98);
 }
 
-/* styles of hamburger's animation */
 
 .m-hamburger::before, 
 .m-hamburger::after, 
@@ -238,11 +211,7 @@ MENU STYLES
   transition-property: transform, opacity;
 }
 
-/*
-=====
-MENU STATES
-=====
-*/
+
 
 .menu__toggle:focus{
   /*outline: var(--menuHaburgerOutlineOWidth, 2px) solid var(--menuHaburgerOutlineColor);*/
@@ -287,12 +256,6 @@ MENU STATES
   transform: rotate(-45deg) translate3d(-.285em,-.3em, 0);
   opacity: 0;
 }
-
-/*
-=====
-SETTINGS
-=====
-*/
 
 :root{
   
@@ -343,11 +306,6 @@ SETTINGS
   --menuHaburgerOutlineColor: var(--colorWhite);
 }
 
-/*
-=====
-DEMO
-=====
-*/
 
 body{
   display: flex;
@@ -410,7 +368,6 @@ body{
 }
 
 .center{
-  /* centrar vertical y horizontalmente */
   position: absolute;
   top: 35%; 
 }
@@ -450,4 +407,128 @@ body{
 
 .center-text{
   text-align: center;
+}
+
+
+/*clases de codigo random*/
+
+#btn-mas{
+  display: none;
+}
+.cotenido{
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+    z-index:99;
+}
+.redes {
+display: flex;
+flex-direction: column;
+width: 250px;
+opacity: 0;
+transition: all 500ms ease;
+visibility: hidden;
+box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+border-radius: 10px;
+color: #fff;
+background: #fff;
+
+}
+.redes .encabezado{
+display: flex;
+flex-direction: column;
+background: rgb(88 101 242);
+color: #fff;
+padding: 15px 10px;
+border-radius: 10px 10px 0px 0px;
+}
+.redes .encabezado b{
+font-size: 20px;
+padding-bottom: 5px;
+}
+.redes .agentes  i{
+font-size: 25px;
+padding: 10px;
+margin: 5px 10px;
+color: #fff;
+background: rgb(88 101 242);
+border-radius: 100px;
+
+}
+.redes .agentes ul{
+list-style: none;
+padding: 15px 0;
+
+}
+.agentes{
+overflow: auto;
+max-height: 300px;
+
+}
+.redes .agentes li{
+color: #000;
+font-size: 18px;
+font-weight: 500;
+}
+.redes .agentes a{
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+.redes .agentes::-webkit-scrollbar {
+   -webkit-appearance: none;
+}
+
+.redes .agentes::-webkit-scrollbar:vertical {
+   width:10px;
+}
+
+.redes .agentes::-webkit-scrollbar-button:increment,.redes .agentes::-webkit-scrollbar-button {
+   display: none;
+} 
+
+.redes .agentes::-webkit-scrollbar:horizontal {
+   height: 10px;
+}
+
+.redes .agentes::-webkit-scrollbar-thumb {
+   background-color: #777;
+   border-radius: 20px;
+   border: 2px solid #777;
+}
+
+.redes .agentes::-webkit-scrollbar-track {
+   border-radius: 10px;  
+}
+      
+.btn-mas label{
+  display: block;
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff !important;
+  width: 55px;
+  height: 55px;
+  line-height:50px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+  transition: all 500ms ease;
+}
+
+
+#btn-mas:checked~ .redes {
+  margin-bottom: 5px;
+  opacity: 1;
+  visibility: visible;
+}
+.btn-mas label{
+  cursor: pointer;
+  background: rgb(88 101 242);
+  font-size: 30px;
+
+}
+
+.cursor{
+  cursor: pointer;
 }
